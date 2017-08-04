@@ -28,6 +28,7 @@ type ConfigStructure struct { // nolint: maligned
 	FileSystemPublishRoots map[string]FileSystemPublishRoot `json:"FileSystemPublishEndpoints"`
 	S3PublishRoots         map[string]S3PublishRoot         `json:"S3PublishEndpoints"`
 	SwiftPublishRoots      map[string]SwiftPublishRoot      `json:"SwiftPublishEndpoints"`
+	GCSPublishRoots        map[string]GCSPublishRoot        `json:"GCSPublishEndpoints"`
 }
 
 // FileSystemPublishRoot describes single filesystem publishing entry point
@@ -68,6 +69,11 @@ type SwiftPublishRoot struct {
 	TenantDomainID string `json:"tenantdomainid"`
 	Prefix         string `json:"prefix"`
 	Container      string `json:"container"`
+}
+
+type GCSPublishRoot struct {
+	Bucket string `json:"bucket"`
+	Prefix string `json:"prefix"`
 }
 
 // Config is configuration for aptly, shared by all modules
