@@ -30,6 +30,9 @@ jobs:
           command: |
             make check 
             make system-test
+      - run:
+          name: Building
+          command: make goxc
 
 workflows:
   version: 2
