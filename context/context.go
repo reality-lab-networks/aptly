@@ -368,7 +368,7 @@ func (context *AptlyContext) GetPublishedStorage(name string) aptly.PublishedSto
 			}
 
 			var err error
-			publishedStorage, err = gcs.NewPublishedStorage(params.Bucket, params.Prefix)
+			publishedStorage, err = gcs.NewPublishedStorage(params.Bucket, params.Prefix, params.ACL)
 			if err != nil {
 				Fatal(err)
 			}

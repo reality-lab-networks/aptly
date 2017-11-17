@@ -74,6 +74,7 @@ type SwiftPublishRoot struct {
 type GCSPublishRoot struct {
 	Bucket string `json:"bucket"`
 	Prefix string `json:"prefix"`
+	ACL    string `json:"acl"`
 }
 
 // Config is configuration for aptly, shared by all modules

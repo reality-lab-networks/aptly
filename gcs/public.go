@@ -23,10 +23,11 @@ type PublishedStorage struct {
 	bucketName string
 	prefix     string
 	pathCache  map[string]string
+	acl        string
 }
 
 // NewPublishedStorage creates a new instance of PublishedStorage
-func NewPublishedStorage(bucketName string, prefix string) (*PublishedStorage, error) {
+func NewPublishedStorage(bucketName string, prefix string, acl string) (*PublishedStorage, error) {
 	client, err := gs.NewClient(context.Background())
 	if err != nil {
 		log.Fatalf("Unable to create storage service: %v", err)
@@ -36,6 +37,7 @@ func NewPublishedStorage(bucketName string, prefix string) (*PublishedStorage, e
 		client:     client,
 		bucketName: bucketName,
 		prefix:     prefix,
+		acl:        acl,
 	}
 	return result, nil
 }
@@ -65,6 +67,15 @@ func (storage *PublishedStorage) PutFile(path string, sourceFilename string) err
 func (storage *PublishedStorage) putFile(path string, source io.ReadSeeker) error {
 	ctx := context.Background()
 	w := storage.client.Bucket(storage.bucketName).Object(filepath.Join(storage.prefix, path)).NewWriter(ctx)
+
+	if storage.acl == "public-read" {
+		w.ACL = []gs.ACLRule{
+			gs.ACLRule{
+				Entity: gs.AllUsers,
+				Role:   gs.RoleReader,
+			},
+		}
+	}
 
 	_, err := io.Copy(w, source)
 	if err != nil {
