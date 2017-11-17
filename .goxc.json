@@ -1,13 +1,10 @@
 {
-	"AppName": "aptly",
-	"ArtifactsDest": "xc-out/",
-	"TasksExclude": [
-		"rmbin",
-		"go-test",
-		"go-vet"
-	],
-    "TasksAppend": [
-		"bintray"
+    "AppName": "aptly",
+    "ArtifactsDest": "xc-out/",
+    "TasksExclude": [
+        "rmbin",
+        "go-test",
+        "go-vet"
     ],
     "TaskSettings": {
         "debs": {
@@ -20,27 +17,21 @@
                 "License": "MIT",
                 "Homepage": "https://www.aptly.info/",
                 "Depends": "bzip2, xz-utils, gnupg, gpgv",
-				"Suggests": "graphviz"
+                "Suggests": "graphviz"
             },
             "other-mapped-files": {
                 "/": "root/"
             }
-        },
-        "bintray": {
-            "repository": "aptly",
-            "subject": "smira",
-            "package": "aptly",
-            "downloadspage": "bintray.md"
         }
     },
-	"ResourcesInclude": "README.rst,LICENSE,AUTHORS,man/aptly.1",
-	"Arch": "386 amd64",
-	"Os": "linux darwin freebsd",
-	"MainDirsExclude": "_man,vendor",
-	"BuildSettings": {
-		"LdFlagsXVars": {
-			"Version": "main.Version"
-		}
-	},
-	"ConfigVersion": "0.9"
+    "ResourcesInclude": "README.rst,LICENSE,AUTHORS,man/aptly.1",
+    "Arch": "amd64",
+    "Os": "linux darwin",
+    "MainDirsExclude": "_man,vendor",
+    "BuildSettings": {
+        "LdFlagsXVars": {
+            "Version": "main.Version"
+        }
+    },
+    "ConfigVersion": "0.9"
 }
