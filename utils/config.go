@@ -71,6 +71,7 @@ type SwiftPublishRoot struct {
 	Container      string `json:"container"`
 }
 
+// GCSPublishRoot describes single Google Storage publishing entry point
 type GCSPublishRoot struct {
 	Bucket string `json:"bucket"`
 	Prefix string `json:"prefix"`

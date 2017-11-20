@@ -8,12 +8,11 @@ import (
 	"os"
 	"path/filepath"
 
+	gs "cloud.google.com/go/storage"
 	"github.com/pkg/errors"
 	"github.com/smira/aptly/aptly"
 	"github.com/smira/aptly/utils"
 	"golang.org/x/net/context"
-
-	gs "cloud.google.com/go/storage"
 	"google.golang.org/api/iterator"
 )
 
@@ -64,7 +63,7 @@ func (storage *PublishedStorage) PutFile(path string, sourceFilename string) err
 	return storage.putFile(path, f)
 }
 
-func (storage *PublishedStorage) putFile(path string, source io.ReadSeeker) error {
+func (storage *PublishedStorage) putFile(path string, source io.Reader) error {
 	ctx := context.Background()
 	w := storage.client.Bucket(storage.bucketName).Object(filepath.Join(storage.prefix, path)).NewWriter(ctx)
 
@@ -81,12 +80,8 @@ func (storage *PublishedStorage) putFile(path string, source io.ReadSeeker) erro
 	if err != nil {
 		return err
 	}
-	err = w.Close()
-	if err != nil {
-		return err
-	}
 
-	return nil
+	return w.Close()
 }
 
 // Remove removes single file under public path
@@ -107,7 +102,7 @@ func (storage *PublishedStorage) RemoveDirs(path string, progress aptly.Progress
 
 	// remove all files in filelist. Is the directory itself deleted?
 	for _, fn := range filelist {
-		// Don't delete everyting by accident
+		// Don't delete everything by accident
 		objName := filepath.Join(storage.prefix, path, fn)
 		err = storage.client.Bucket(storage.bucketName).Object(objName).Delete(context.Background())
 		if err != nil {
@@ -230,9 +225,5 @@ func (storage *PublishedStorage) RenameFile(oldName, newName string) error {
 		return err
 	}
 
-	err = srcObj.Delete(context.Background())
-	if err != nil {
-		return err
-	}
-	return nil
+	return srcObj.Delete(context.Background())
 }
