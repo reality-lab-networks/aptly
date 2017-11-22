@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test_and_build:
+  test:
     docker:
       - image: golang:1.9
     working_directory: /go/src/github.com/smira/aptly
@@ -30,12 +30,25 @@ jobs:
           command: |
             make check 
             make system-test
+
+  build:
+    docker:
+      - image: golang:1.9
+    working_directory: /go/src/github.com/smira/aptly
+    steps:
+      - checkout
+      - run:
+          name: Preparing build env
+          command: make dev
       - run:
           name: Building
           command: make goxc
+      - store_artifacts:
+          path: ./xc-out/
 
 workflows:
   version: 2
   test_and_build:
     jobs:
-      - test_and_build
+      - test
+      - build
