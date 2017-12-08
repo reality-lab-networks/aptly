@@ -220,7 +220,18 @@ func (storage *PublishedStorage) RenameFile(oldName, newName string) error {
 	destPath := filepath.Join(storage.prefix, newName)
 	destObj := storage.client.Bucket(storage.bucketName).Object(destPath)
 
-	_, err := destObj.CopierFrom(srcObj).Run(context.Background())
+	c := destObj.CopierFrom(srcObj)
+
+	if storage.acl == "public-read" {
+		c.ACL = []gs.ACLRule{
+			gs.ACLRule{
+				Entity: gs.AllUsers,
+				Role:   gs.RoleReader,
+			},
+		}
+	}
+
+	_, err := c.Run(context.Background())
 	if err != nil {
 		return err
 	}
