@@ -74,6 +74,7 @@ func (storage *PublishedStorage) putFile(path string, source io.Reader) error {
 				Role:   gs.RoleReader,
 			},
 		}
+		w.CacheControl = "no-cache,max-age=0"
 	}
 
 	_, err := io.Copy(w, source)
@@ -229,6 +230,7 @@ func (storage *PublishedStorage) RenameFile(oldName, newName string) error {
 				Role:   gs.RoleReader,
 			},
 		}
+		c.CacheControl = "no-cache,max-age=0"
 	}
 
 	_, err := c.Run(context.Background())
