@@ -1,0 +1,32 @@
+
+[[dependencies]]
+  branch = "master"
+  name = "github.com/mkrautz/goar"
+
+[[dependencies]]
+  branch = "master"
+  name = "github.com/smira/go-uuid"
+
+[[dependencies]]
+  branch = "master"
+  name = "github.com/smira/go-xz"
+
+[[dependencies]]
+  name = "github.com/ugorji/go"
+  revision = "71c2886f5a673a35f909803f38ece5810165097b"
+
+[[dependencies]]
+  branch = "master"
+  name = "golang.org/x/crypto"
+
+[[dependencies]]
+  branch = "master"
+  name = "golang.org/x/sys"
+
+[[dependencies]]
+  branch = "v1"
+  name = "gopkg.in/check.v1"
+
+[[constraint]]
+  name = "github.com/googleapis/gax-go"
+  version = "2.0.0"
