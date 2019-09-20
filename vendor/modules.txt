@@ -1,0 +1,199 @@
+# cloud.google.com/go v0.16.0
+cloud.google.com/go/storage
+cloud.google.com/go/iam
+cloud.google.com/go/internal
+cloud.google.com/go/internal/optional
+cloud.google.com/go/internal/version
+cloud.google.com/go/compute/metadata
+# github.com/AlekSi/pointer v1.0.0
+github.com/AlekSi/pointer
+# github.com/DisposaBoy/JsonConfigReader v0.0.0-20130112093355-33a99fdf1d5e
+github.com/DisposaBoy/JsonConfigReader
+# github.com/awalterschulze/gographviz v0.0.0-20160912181450-761fd5fbb34e
+github.com/awalterschulze/gographviz
+github.com/awalterschulze/gographviz/ast
+github.com/awalterschulze/gographviz/parser
+github.com/awalterschulze/gographviz/scanner
+github.com/awalterschulze/gographviz/token
+# github.com/aws/aws-sdk-go v1.12.1
+github.com/aws/aws-sdk-go/aws
+github.com/aws/aws-sdk-go/aws/corehandlers
+github.com/aws/aws-sdk-go/aws/credentials
+github.com/aws/aws-sdk-go/aws/request
+github.com/aws/aws-sdk-go/aws/session
+github.com/aws/aws-sdk-go/service/s3
+github.com/aws/aws-sdk-go/aws/awserr
+github.com/aws/aws-sdk-go/aws/endpoints
+github.com/aws/aws-sdk-go/internal/shareddefaults
+github.com/aws/aws-sdk-go/aws/awsutil
+github.com/aws/aws-sdk-go/aws/client/metadata
+github.com/aws/aws-sdk-go/aws/client
+github.com/aws/aws-sdk-go/aws/credentials/stscreds
+github.com/aws/aws-sdk-go/aws/defaults
+github.com/aws/aws-sdk-go/aws/signer/v4
+github.com/aws/aws-sdk-go/private/protocol
+github.com/aws/aws-sdk-go/private/protocol/restxml
+github.com/aws/aws-sdk-go/service/sts
+github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds
+github.com/aws/aws-sdk-go/aws/credentials/endpointcreds
+github.com/aws/aws-sdk-go/aws/ec2metadata
+github.com/aws/aws-sdk-go/private/protocol/rest
+github.com/aws/aws-sdk-go/private/protocol/query
+github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil
+github.com/aws/aws-sdk-go/private/protocol/query/queryutil
+# github.com/cheggaaa/pb v1.0.10
+github.com/cheggaaa/pb
+# github.com/gin-contrib/sse v0.0.0-20170109093832-22d885f9ecc7
+github.com/gin-contrib/sse
+# github.com/gin-gonic/gin v0.0.0-20170702092826-d459835d2b07
+github.com/gin-gonic/gin
+github.com/gin-gonic/gin/binding
+github.com/gin-gonic/gin/render
+# github.com/go-ini/ini v1.26.0
+github.com/go-ini/ini
+# github.com/golang/protobuf v0.0.0-20170920220647-130e6b02ab05
+github.com/golang/protobuf/proto
+github.com/golang/protobuf/ptypes
+github.com/golang/protobuf/protoc-gen-go/descriptor
+github.com/golang/protobuf/ptypes/any
+github.com/golang/protobuf/ptypes/duration
+github.com/golang/protobuf/ptypes/timestamp
+# github.com/golang/snappy v0.0.0-20170215233205-553a64147049
+github.com/golang/snappy
+# github.com/googleapis/gax-go v2.0.0+incompatible
+github.com/googleapis/gax-go
+# github.com/h2non/filetype v0.0.0-20170308102658-0df83c38d14f
+github.com/h2non/filetype/matchers
+# github.com/jlaffaye/ftp v0.0.0-20170304123431-7b85eb4638a2
+github.com/jlaffaye/ftp
+# github.com/jmespath/go-jmespath v0.0.0-20160202185014-0b12d6b521d8
+github.com/jmespath/go-jmespath
+# github.com/mattn/go-isatty v0.0.3
+github.com/mattn/go-isatty
+# github.com/mattn/go-runewidth v0.0.2
+github.com/mattn/go-runewidth
+# github.com/mattn/go-shellwords v1.0.2
+github.com/mattn/go-shellwords
+# github.com/mkrautz/goar v0.0.0-20150919110319-282caa8bd9da
+github.com/mkrautz/goar
+# github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f
+github.com/mxk/go-flowrate/flowrate
+# github.com/ncw/swift v1.0.30
+github.com/ncw/swift
+github.com/ncw/swift/swifttest
+# github.com/pkg/errors v0.8.0
+github.com/pkg/errors
+# github.com/smira/commander v0.0.0-20140515201010-f408b00e68d5
+github.com/smira/commander
+# github.com/smira/flag v0.0.0-20170926215700-695ea5e84e76
+github.com/smira/flag
+# github.com/smira/go-aws-auth v0.0.0-20180731211914-8b73995fd8d1
+github.com/smira/go-aws-auth
+# github.com/smira/go-ftp-protocol v0.0.0-20140829150050-066b75c2b70d
+github.com/smira/go-ftp-protocol/protocol
+# github.com/smira/go-uuid v0.0.0-20141202165402-ed3ca8a15a93
+github.com/smira/go-uuid/uuid
+# github.com/smira/go-xz v0.0.0-20150414201226-0c531f070014
+github.com/smira/go-xz
+# github.com/smira/lzma v0.0.0-20160124201817-7f0af6269940
+github.com/smira/lzma
+# github.com/syndtr/goleveldb v0.0.0-20171105032630-549b6d6b1c04
+github.com/syndtr/goleveldb/leveldb
+github.com/syndtr/goleveldb/leveldb/filter
+github.com/syndtr/goleveldb/leveldb/opt
+github.com/syndtr/goleveldb/leveldb/storage
+github.com/syndtr/goleveldb/leveldb/util
+github.com/syndtr/goleveldb/leveldb/cache
+github.com/syndtr/goleveldb/leveldb/comparer
+github.com/syndtr/goleveldb/leveldb/errors
+github.com/syndtr/goleveldb/leveldb/iterator
+github.com/syndtr/goleveldb/leveldb/journal
+github.com/syndtr/goleveldb/leveldb/memdb
+github.com/syndtr/goleveldb/leveldb/table
+# github.com/ugorji/go v0.0.0-20140221154404-71c2886f5a67
+github.com/ugorji/go/codec
+# github.com/wsxiaoys/terminal v0.0.0-20160513160801-0940f3fc43a0
+github.com/wsxiaoys/terminal/color
+# golang.org/x/crypto v0.0.0-20170317163734-459e26527287
+golang.org/x/crypto/ssh/terminal
+golang.org/x/crypto/openpgp
+golang.org/x/crypto/openpgp/armor
+golang.org/x/crypto/openpgp/clearsign
+golang.org/x/crypto/openpgp/errors
+golang.org/x/crypto/openpgp/packet
+golang.org/x/crypto/openpgp/s2k
+golang.org/x/crypto/cast5
+golang.org/x/crypto/openpgp/elgamal
+# golang.org/x/net v0.0.0-20171115151908-9dfe39835686
+golang.org/x/net/context
+golang.org/x/net/context/ctxhttp
+golang.org/x/net/http2
+golang.org/x/net/trace
+golang.org/x/net/http2/hpack
+golang.org/x/net/idna
+golang.org/x/net/lex/httplex
+golang.org/x/net/internal/timeseries
+# golang.org/x/oauth2 v0.0.0-20171106152852-9ff8ebcc8e24
+golang.org/x/oauth2
+golang.org/x/oauth2/internal
+golang.org/x/oauth2/google
+golang.org/x/oauth2/jws
+golang.org/x/oauth2/jwt
+# golang.org/x/sys v0.0.0-20170308153327-99f16d856c98
+golang.org/x/sys/unix
+# golang.org/x/text v0.0.0-20171102192421-88f656faf3f3
+golang.org/x/text/secure/bidirule
+golang.org/x/text/unicode/bidi
+golang.org/x/text/unicode/norm
+golang.org/x/text/transform
+# google.golang.org/api v0.0.0-20171116210734-1f7e48066acd
+google.golang.org/api/iterator
+google.golang.org/api/googleapi
+google.golang.org/api/option
+google.golang.org/api/storage/v1
+google.golang.org/api/transport/http
+google.golang.org/api/googleapi/internal/uritemplates
+google.golang.org/api/internal
+google.golang.org/api/gensupport
+google.golang.org/api/googleapi/transport
+# google.golang.org/appengine v1.0.0
+google.golang.org/appengine/urlfetch
+google.golang.org/appengine/internal
+google.golang.org/appengine/internal/urlfetch
+google.golang.org/appengine
+google.golang.org/appengine/internal/base
+google.golang.org/appengine/internal/datastore
+google.golang.org/appengine/internal/log
+google.golang.org/appengine/internal/remote_api
+google.golang.org/appengine/internal/app_identity
+google.golang.org/appengine/internal/modules
+# google.golang.org/genproto v0.0.0-20171103030625-11c7f9e547da
+google.golang.org/genproto/googleapis/iam/v1
+google.golang.org/genproto/googleapis/api/annotations
+google.golang.org/genproto/googleapis/rpc/status
+# google.golang.org/grpc v1.7.3
+google.golang.org/grpc
+google.golang.org/grpc/codes
+google.golang.org/grpc/status
+google.golang.org/grpc/balancer
+google.golang.org/grpc/connectivity
+google.golang.org/grpc/credentials
+google.golang.org/grpc/grpclb/grpc_lb_v1/messages
+google.golang.org/grpc/grpclog
+google.golang.org/grpc/internal
+google.golang.org/grpc/keepalive
+google.golang.org/grpc/metadata
+google.golang.org/grpc/naming
+google.golang.org/grpc/peer
+google.golang.org/grpc/resolver
+google.golang.org/grpc/stats
+google.golang.org/grpc/tap
+google.golang.org/grpc/transport
+# gopkg.in/check.v1 v1.0.0-20161208181325-20d25e280405
+gopkg.in/check.v1
+# gopkg.in/go-playground/validator.v8 v8.18.2
+gopkg.in/go-playground/validator.v8
+# gopkg.in/h2non/filetype.v1 v1.0.1
+gopkg.in/h2non/filetype.v1/types
+# gopkg.in/yaml.v2 v2.0.0-20170812160011-eb3733d160e7
+gopkg.in/yaml.v2
