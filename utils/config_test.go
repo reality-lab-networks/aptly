@@ -42,6 +42,9 @@ func (s *ConfigSuite) TestSaveConfig(c *C) {
 	s.config.SwiftPublishRoots = map[string]SwiftPublishRoot{"test": {
 		Container: "repo"}}
 
+	s.config.GCSPublishRoots = map[string]GCSPublishRoot{"test": {
+		Bucket: "repo"}}
+
 	err := SaveConfig(configname, &s.config)
 	c.Assert(err, IsNil)
 
@@ -109,6 +112,13 @@ func (s *ConfigSuite) TestSaveConfig(c *C) {
 		"      \"tenantdomainid\": \"\",\n"+
 		"      \"prefix\": \"\",\n"+
 		"      \"container\": \"repo\"\n"+
+		"    }\n"+
+		"  },\n"+
+		"  \"GCSPublishEndpoints\": {\n"+
+		"    \"test\": {\n"+
+		"      \"bucket\": \"repo\",\n"+
+		"      \"prefix\": \"\",\n"+
+		"      \"acl\": \"\"\n"+
 		"    }\n"+
 		"  }\n"+
 		"}")
